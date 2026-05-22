@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css'
 import './test/test.css'
-import { MoviesList } from './components/MoviesList';
+import {Tasks} from './components/Tasks'
+import { TaskForm } from './components/TaskForm';
+import { MovieForm } from './components/MovieForm';
 
 function App() {
   
-  return <MoviesList />
+  return <MovieForm />
 }
 
 export default App;

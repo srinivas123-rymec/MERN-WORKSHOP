@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import {useNavigate} from 'react-router-dom'
 import { saveMovie } from '../api'
 
-function MovieForm({ onSave }) {
+function MovieForm({ }) {
 
-  const navigate = useNavigate()
   const [title,setTitle] = useState('')
   const [year,setYear] = useState('B')
   const [url,setUrl] = useState('C')
@@ -33,27 +31,15 @@ function MovieForm({ onSave }) {
     if(title && url && year) {
       const movieObject = {
         title,
-        poster:url,
+        url,
         year
       }
 
       saveMovie(movieObject)
-
-      navigate('/')
     }
   }
 
-  const handleOnBackButton = () => {
-    navigate('/')
-  }
-
-  return <div>
-    <button type='button' onClick={handleOnBackButton}>
-      Back
-    </button>
-  
-  <div className='form-container'>
-    
+  return <div className='form-container'>
     <p className='movie-form'>
       
     <form onSubmit={handleOnSubmit}>
@@ -93,7 +79,6 @@ function MovieForm({ onSave }) {
     </form>
     
     </p>
-  </div>
   </div>
 }
 
