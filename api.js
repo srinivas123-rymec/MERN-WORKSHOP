@@ -1,4 +1,6 @@
-
+function saveMovie(movieObject) {
+    console.log('Save movie in api',movieObject)
+}
 
 const moviesData = [
   {
@@ -86,14 +88,6 @@ const moviesData = [
 
 function getMovies() {
     return moviesData
-}
-
-function saveMovie(movieObject) {
-    moviesData.push({
-      title:movieObject.title,
-      poster:movieObject.poster,
-      year:movieObject.year
-    })
 }
 
 export {

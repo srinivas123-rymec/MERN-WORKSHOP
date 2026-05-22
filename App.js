@@ -1,17 +1,11 @@
+import logo from './logo.svg';
 import './App.css'
+import './test/test.css'
 import { MoviesList } from './components/MoviesList';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { MovieForm } from './components/MovieForm';
 
 function App() {
   
-  return <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MoviesList />} />
-        <Route path="/movies/:id" element={<MovieForm />} />
-      </Routes>
-    </BrowserRouter>
-  
+  return <MoviesList />
 }
 
 export default App;

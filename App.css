@@ -36,8 +36,7 @@ margin-bottom: 25px;
     margin: 20px;
     box-shadow: 5px 5px purple;
     flex-wrap: wrap;
-    width: calc('25%'-25px);
-    border-radius: 10px;
+    width: 25%;
 }
 
 .movie-card img {
